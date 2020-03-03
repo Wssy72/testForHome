@@ -29,7 +29,7 @@ class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     // register standart cell
     //myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "registerCell")
     //register customCell
-    myTableView.register(MyTableViewCell.self, forCellReuseIdentifier: "registerCell")
+    myTableView.register(MyTableViewCell.self, forCellReuseIdentifier: registerCell)
     //title = "Table"
     view.backgroundColor = UIColor.white
     self.myTableView.dataSource = self
@@ -41,7 +41,7 @@ class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return dataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "registerCell", for: indexPath) as! MyTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: registerCell, for: indexPath) as! MyTableViewCell
         
         cell.textLabel?.text = dataArray[indexPath.row].description
         cell.textLabel?.textAlignment = .right
