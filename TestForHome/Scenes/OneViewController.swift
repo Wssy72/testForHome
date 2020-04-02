@@ -27,7 +27,7 @@ class OneViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     //myTableView.frame = CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight)
     // register standart cell
-    //myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "registerCell")
+    //myTableView.register(UITableViewCell.self, forCellReuseIdentifier: registerCell)
     //register customCell
     myTableView.register(MyTableViewCell.self, forCellReuseIdentifier: registerCell)
     //title = "Table"
